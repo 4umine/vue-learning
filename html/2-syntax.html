@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <!-- 插值 -->
+        <div id="app1">
+            <span v-once>this will never change: {{ message }}</span><br>
+            <span v-html="rawHtml"></span><br>
+            <span>{{ count + 1 }}</span>
+        </div>
+
+        <!-- 指令 -->
+        <div id="app2">
+            <p v-if="seen">you can see me</p>
+            <a v-bind:href='url'>去百度</a>
+            <p v-on:click='tip'>点我</p>
+            <p>{{ message | filter1 }}</p>
+            <p>{{ message2 | filter2('hello') }}</p>
+
+            <a :href='url'>v-bind缩写版去百度</a>
+            <p @click='tip'>v-on缩写点我</p>
+        </div>
+
+    </body>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- Vue实例 -->
+    <script src="../js/2-syntax.js"></script>
+
+</html>
+

@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <div id="app">
+            <p>message: {{ message }}</p>
+            <p>computed reversed message: {{ reversedMessage }}</p>
+            <p>methods Reversed message: "{{ reverseMessage() }}"</p>
+            <p onclick='testComputedCache()'>测试计算属性缓存</p>
+        </div>
+
+        <div id="app2">
+            <p>{{ fullName }}</p><p onclick='changeName()'>改姓</p>
+        </div>
+
+        <div id="app3">
+            <p>{{ fullName }}</p>
+        </div>
+
+        <div id="app4">
+            <p>{{ fullName }}</p><p onclick='changeName4()'>改名字</p>
+        </div>
+    </body>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="../js/3-computed.js"></script>
+
+</html>
