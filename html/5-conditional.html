@@ -1,0 +1,46 @@
+<html>
+    <body>
+        <div id="app">
+            <div v-if="type === 'ok'">if</div>
+            <div v-else>else if</div>
+
+            <template v-if="temp === 'ok'">
+                <h1>Title</h1>
+                <p>Paragraph 1</p>
+                <p>Paragraph 2</p>
+            </template>
+
+            <div v-if="multi === 'A'">{{ multi }}</div>
+            <div v-else-if="multi === 'B'">{{ multi }}</div>
+            <div v-else>{{ multi }}</div>
+
+            <p>不使用key，可重用</p>
+            <template v-if="loginType === 'username'">
+                <label>username</label>
+                <input placeholder="please enter you username">
+            </template>
+            <template v-else>
+                <label>email</label>
+                <input placeholder="please enter you email">
+            </template>
+            <input type="button" value="切换登录，观察dom" onclick="changeLoginType()">
+
+            <p>使用key，重新渲染</p>
+            <template v-if="loginType2 === 'username'">
+                <label>username</label>
+                <input placeholder="please enter you username" key="usernameKey">
+            </template>
+            <template v-else>
+                <label>email</label>
+                <input placeholder="please enter you email" key="emailKey">
+            </template>
+            <input type="button" value="切换登录，观察dom" onclick="changeLoginType2()">
+
+            <div v-show="show === 'yes'">you can see me</div>
+        </div>
+    </body>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="../js/5-conditional.js"></script>
+
+</html>

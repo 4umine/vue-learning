@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <div id="app">
+            <!-- 普通class和v-bind;class共存 -->
+            <div class="static" v-bind:class="{ active: isActive }">I'm active</div>
+            <div class="static" v-bind:class='classObject'>class Object</div>
+            <div v-bind:class='classObject2'>使用计算属性</div>
+            <div v-bind:class='[show, size]'>使用数组</div>
+        </div>
+
+        <div id="app2">
+            <p v-bind:style="{color: textColor, fontSize: fontSize + 'px'}">js对象</p>
+            <p v-bind:style="styleObject">样式对象</p>
+            <p v-bind:style="styleObject2">计算属性</p>
+            <p v-bind:style="[textColor, size]">对象数组</p>
+        </div>
+    </body>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="../js/4-class-and-style.js"></script>
+
+</html>
+
