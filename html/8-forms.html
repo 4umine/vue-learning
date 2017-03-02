@@ -1,0 +1,49 @@
+<html>
+    <body>
+        <div id="app">
+            <!-- 文本 -->
+            <input v-model="message" placeholder="请输入">
+            <p>message: {{ message }}</p>
+
+            <!-- 复选框 -->
+            <input v-model="checked" type="checkbox" id="checkbox">
+            <label for="checkbox">{{ checked }}</label>
+            <br>
+
+            <!-- 多个复选框，绑定到一个数组 -->
+            <input v-model="checkedNames" type="checkbox" id="imant" value="imant">
+            <label for="imant">imant</label>
+            <input v-model="checkedNames" type="checkbox" id="tom" value="tom">
+            <label for="tom">tom</label>
+            <input v-model="checkedNames" type="checkbox" id="jerry" value="jerry">
+            <label for="jerry">jerry</label><br>
+            <span>checked names: {{ checkedNames }}</span><br>
+
+            <!-- 单选按钮 -->
+            <input type="radio" value="apple" id="apple" v-model="ppap">
+            <label for="apple">apple</label>
+            <input type="radio" value="pineapple" id="pineapple" v-model="ppap">
+            <label for="pineapple">pineapple</label>
+            <label>ppap: {{ ppap }}</label><br>
+
+            <!-- 选择列表 -->
+            <select v-model="select">
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+            </select>
+            <span>select: {{ select }}</span><br>
+
+            <!-- 多选列表 -->
+            <select v-model="multiSelect" multiple>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+            </select>
+            <span>select: {{ multiSelect }}</span>
+        </div>
+    </body>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="../js/8-forms.js"></script>
+</html>

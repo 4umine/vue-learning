@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <ul id="app">
+            <li v-for="item in items">
+                {{ item.message }}
+            </li>
+        </ul>
+        <ul id="app2">
+            <li v-for="(item, index) in items">
+                {{ item.message + '-' + index + '-' + parentMessage }}
+            </li>
+        </ul>
+
+        <ul id="app3">
+            <template v-for="item in items">
+                <li>{{ item.message }}</li>
+                <li>块循环</li>
+            </template>
+        </ul>
+
+        <ul id="app4">
+            <li v-for="(val, key, index) in object">
+                {{ val + '-' + key + '-' + index }}
+            </li>
+            <li v-for="n in 10">{{ n }}</li>
+        </ul>
+    </body>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="../js/6-list.js"></script>
+
+</html>
+

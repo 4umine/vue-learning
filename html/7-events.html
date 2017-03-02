@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <div id="app">
+            <button v-on:click="count += 1">增加1</button>
+            <p>按钮被点了{{ count }}</p>
+            <button v-on:click="show">调用方法</button>
+
+            <button v-on:click="say('hi', $event)">say hi</button>
+            <button v-on:click="say('what', $event)">say what</button>
+        </div>
+    </body>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="../js/7-events.js"></script>
+
+</html>

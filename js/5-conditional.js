@@ -27,6 +27,7 @@ var vm = new Vue({
         /**
          * 4. v-show 只是简单的切换css的display属性
          * 不支持<template>
+         * 频繁切换样式使用v-show较好
          */
         show: 'yes'
     }
