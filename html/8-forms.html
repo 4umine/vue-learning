@@ -40,7 +40,12 @@
                 <option>B</option>
                 <option>C</option>
             </select>
-            <span>select: {{ multiSelect }}</span>
+            <span>select: {{ multiSelect }}</span><br>
+
+            <select v-model="selected">
+                <option v-for="option in options" v-bind:value="option.value">{{ option.text }}</option>
+            </select>
+            <span>selected: {{ selected }}</span>
         </div>
     </body>
 

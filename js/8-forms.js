@@ -6,6 +6,13 @@ var vm = new Vue({
         checkedNames: [],
         ppap: '',
         select: '',
-        multiSelect: []
+        multiSelect: [],
+
+        selected: '',
+        options: [
+            {text: 'one', value: 'A'},
+            {text: 'two', value: 'B'},
+            {text: 'three', value: 'C'}
+        ]
     }
 });
