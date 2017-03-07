@@ -92,10 +92,14 @@ var vm5 = new Vue({
     }
 });
 
+/**
+ * 6. 单项数据绑定
+ */
 Vue.component('child-component', {
     props: ['childMsg'],
-    template: '#template6'
+    template: '#template6',
 });
+
 new Vue({
     el: '#app6',
     data: {
