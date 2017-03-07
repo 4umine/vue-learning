@@ -1,0 +1,53 @@
+<html>
+    <body>
+        <!-- 1. 全局组件 -->
+        <div id="app">
+            <my-component></my-component>
+        </div>
+
+        <!-- 2. 局部注册 -->
+        <div id="app2">
+            <partial-component></m-component>
+        </div>
+
+        <!-- 3. DOM解析，is属性 -->
+        <table id="app3">
+            <tr is="my-row"></tr>
+        </table>
+
+        <!-- 4. data必须是函数 -->
+        <div id="app4">
+            <simple-counter></simple-counter>
+            <simple-counter></simple-counter>
+            <simple-counter></simple-counter>
+        </div>
+
+        <!-- 5. 使用props传递数据 -->
+        <template id="template-component">
+            <span>template component</span>
+        </template>
+        <div id="app5">
+            <!-- props用驼峰，这里须用肉串式 -->
+            <child :my-message="parentMsg">
+            </child>
+            <child2></child2>
+        </div>
+        <hr>
+
+        <!-- 6. 单向数据流 -->
+        <template id="template6">
+            <!--<span>{{childMsg}}</span>-->
+            <input type="text" v-model="childMsg">
+        </template>
+        <div id="app6">
+            <span>{{parentMsg6}}</span><input type="text" v-model="parentMsg6"><br>
+            <child-component :child-msg="parentMsg6"></child-component>
+        </div>
+    </body>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- Vue实例 -->
+    <script src="../js/9-component.js"></script>
+
+</html>
+
